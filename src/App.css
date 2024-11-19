@@ -1,38 +1,155 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="text"] {
+  width: calc(100% - 24px);
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  background: #007bff;
   color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.feedback {
+  margin-top: 20px;
+}
+
+.feedback ul {
+  list-style: none;
+  padding: 0;
+}
+
+.feedback li {
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.best-score {
+  margin-top: 30px;
+  background: #e9f7ef;
+  padding: 15px;
+  border-radius: 5px;
+  color: #1d643b;
+  font-weight: bold;
+}
+
+.finished {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+/* General table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header styling */
+thead {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1.2em;
+}
+
+/* Table header cell styling */
+th {
+  padding: 12px 20px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Table row styling */
+tbody tr {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Alternate row color */
+}
+
+tbody tr:hover {
+  background-color: #e0f7fa; /* Highlight row on hover */
+}
+
+/* Table cell styling */
+td {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/* Styling for the table's date column */
+td:last-child {
+  color: #555;
+  font-style: italic;
+}
+
+/* Add some spacing and margins for the table container */
+.all-scores {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
   }
-  to {
-    transform: rotate(360deg);
+
+  th, td {
+    padding: 8px;
   }
 }
